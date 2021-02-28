@@ -67,12 +67,16 @@ img {
 }
 
 #login {
-    margin-left: 25vw;
+    margin-left: 20vw;
     margin-top: 20vw;
 }
 
 #login input {
     width: 10vw;
+}
+
+#logBody {
+    background: linear-gradient(#000, #000) no-repeat center/2px 100%;
 }
 
 @media only screen and (max-width: 500px) {
