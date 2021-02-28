@@ -1,0 +1,86 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streams</title>
+    <link rel="stylesheet" href="myStyle.css">
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>  
+            <li><a href="presentations.html">Presentations</a></li>  
+            <li><a href="aboutus.html">About Us</a></li>  
+            <li><a href="login.html">Login</a></li>  
+            <li><a class="active" href="stream.html">Stream</a></li>
+        </ul>
+    </nav>
+
+</head>
+<body>
+
+<p>Streamers, enter your twitch handle here</p>
+<input type="text" id="twitch"><br><br> 
+<button onClick="addStream();">Submit</button>
+
+<p>Current streams</p>
+<div id='currentStreams'></div>
+
+<p>To remove you stream, type your name again</p>
+<input type="text" id="twitchremove"><br><br> 
+<button onClick="removeStream();">Submit</button>
+
+
+  <script>
+   let currentStreamers = [];
+
+    function addStream() {
+
+        let streamer = document.getElementById('twitch').value;
+
+        document.getElementById('twitch').value = '';
+
+        let url = "twitch.tv/" + streamer
+
+        currentStreamers.unshift(url);
+
+        let display = "";
+
+        for (entry of currentStreamers) {
+            display += "<p>" + entry + "</p>";
+        }
+
+        document.getElementById('currentStreams').innerHTML = display;
+
+
+        console.log(display);
+    }
+
+    function removeStream() {
+
+        let streamer = document.getElementById('twitchremove').value;
+        
+        document.getElementById('twitchremove').value = '';
+
+        let url = "twitch.tv/" + streamer
+
+        let display = "";
+
+        let index = currentStreamers.indexOf(url);
+
+        console.log(index);
+
+        currentStreamers = currentStreamers.filter(link => link !== url);
+  
+        for (entry of currentStreamers) {
+            display += "<p>" + entry + "</p>";
+        }
+
+         document.getElementById('currentStreams').innerHTML = display;
+
+    }
+
+    </script>
+</body>
+
+
+</html>
