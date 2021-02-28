@@ -1,0 +1,88 @@
+h1 {
+    text-align: center;
+    margin-bottom: 4vw;
+}
+
+li {
+    list-style-type: none;
+    margin: 2vw;
+    font-size: 3vh;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    padding: 2vw;
+    font-family: monospace;
+}
+
+nav {
+    width: 100vw;
+    background-color: #8F9AFB;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+body {
+    margin: 0;
+}
+
+.active {
+    background-color: #6B7AFF;
+    height: 2vh;
+}
+
+.homeButtons {
+    background-color: #6CBFFB;
+    padding: 2vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+
+.left {
+    margin-left: 1vw;
+}
+
+#search {
+    margin: 2vw;
+}
+
+p {
+    width: 45vw;
+    margin-left: 8vw;
+    font-size: 22pt;
+}
+
+img {
+    width: 40vw;
+    float: right;
+    margin-right: 3vw;
+}
+
+#login {
+    margin-left: 25vw;
+    margin-top: 20vw;
+}
+
+#login input {
+    width: 10vw;
+}
+
+@media only screen and (max-width: 500px) {
+    ul {
+        flex-direction: column;
+    }
+
+    li {
+        margin: 0;
+    }
+
+    a {
+        display: block;
+    }
+
+}
